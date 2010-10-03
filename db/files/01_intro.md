@@ -1,382 +1,195 @@
-Introduction to Ruby and Rails
-------------------------------
+Hello, Python
+-------------
 
+Python is a programming language. That means it is a specific language
+for describing computations or algorithms to be executed on a computer.
+  Let's take a look at a very simple program, just a single instruction
+  to print some text on the screen:
 
-A. Getting a Good UNIX Environment
-----------------------------------
+    print("Hello, world!")
 
-Windows
--------
+To make this a program you would type this into a text editor and save
+it as a file with a *.py* extension, like *hello.py*. When you run this
+program it has the following output:
 
-Ruby 1.9.2: 
+    Hello, World
 
-* [Win Installer](http://rubyforge.org/frs/download.php/72170/rubyinstaller-1.9.2-p0.exe)
-* Select *"Add Ruby Executables to PATH"* when installing Ruby
+Python, when run from the command line without specifying a file to
+execute opens an interactive shell. It also ships with a GUI application
+that contains an interactive shell called IDLE. The Python shell allows
+you to enter single Python statements that execute right away. Let's
+take a look. It looks something like this:
 
-SQLite3
+    Python 3.1.2 (release31-maint, Sep 17 2010, 20:27:33) 
+    [GCC 4.4.5] on linux2
+    Type "help", "copyright", "credits" or "license" for more information.
+    >>> print("Hello, World")
+    Hello, World
+    >>> 
 
-* [zip](http://www.sqlite.org/sqlitedll-3_7_2.zip)
-* extract and copy sqlite3.dll into C:\Ruby192\bin
+The Python shell gives you a prompt to enter single statements, in the
+previous example, I type the simple print command which executed as
+soon as I pressed Enter. Python carried out the very simple command, to
+print "Hello, World".
 
-Git: 
+*print* is the name of a function defined in the Python programming
+environment. It's primary purpose is to output text to the screen, but
+it can also output text to a file.
 
-* [Git For Windows](http://code.google.com/p/msysgit/)
-* Click Download, select msysGit-fullinstall.....
-* Run installer, installs to C:\msysgit
+The text *print("Hello, world")* is a statement in the Python
+programming language. It contains the name of a function, *print*, and a
+string of text, *"Hello, world"* which is passed to the string function.
+This is called a *function call* or you could say the print function is
+invoked.
 
-Ubuntu
-------
+String Literals
+---------------
 
-Install ruby1.8, ruby1.8-dev, build-essential, libxslt-dev, libxml2-dev,
-git-core
+In the Python language, you can represent text as a string of letters
+delimited with quotation marks, either single quotes or double quotes.
 
-OS X
-----
+    >>> "Hello, World"
+    'Hello, World'
+    >>> 'Hello, World'
+    'Hello, World'
 
-* Install Xcode. 
-* Install Git.
+When you enter an expression, like a string literal, in the Python
+shell, it reports back the value of the expression. In a normal Python
+program, in order to output the value to the screen, you would need to
+use the *print* command. The shell is merely echoing back the value of
+the expression for convenience.
 
-Important Note on Shell Commands
---------------------------------
+There are ways of escaping special characters in the string, using the
+backslash (\). For example, a double quoted string may contain a double
+quote if escaped and a single quoted string may contain a single quote
+if escaped.
 
-Whenever the instructions show entering commands after a dollar sign
-($), those commands are to be entered in the shell, preferably the bash
-shell. On OS X this application will be called Terminal, on Linux it
-will be called Terminal or Xterm. On Windows, there is a .bat file in
-C:\msysgit\msysgit called msysgit.bat. Double click on that file to open
-a bash shell. So something like this:
+    >>> "She said, \"Hello, World.\""
+    'She said, "Hello, World."'
+    >>> 'It\'s a nice day.'
+    "It's a nice day."
 
-    $ ls -la
+You'll notice the shell uses whichever is more convenient, using double
+quotes if a string contains only single quotes and vice versa when
+displaying the value of the string.
 
-Means enter "ls -la" and hit enter in the bash shell. Another important
-note is that certain commands need to be entered while in a particular
-working directory. Type 'pwd' and hit enter to see the directory you are
-working in.
-
-    $ pwd
-    /home/steve/rails_stuff/my_project
-
-The 'cd' command, which stands for 'change directory' is very handy. If
-you run it without a directory name, it will take you to your home
-directory. Give it the name of a folder to move into or '..' to back
-out.
-
-    $ cd
-    $ pwd
-    /home/steve
-    $ cd rails_stuff
-    $ pwd
-    /home/steve/rails_stuff
-    $ cd ..
-    $ pwd
-    /home/steve
-
-B. Install RVM (Linux or OS X)
-------------------------------
-
-[Ruby Version Manager](http://rvm.beginrescueend.com/)
-
-[Install RVM](http://rvm.beginrescueend.com/rvm/install/)
-
-    $ cd
-    $ mkdir rvm
-    $ cd rvm
-    $ curl http://rvm.beginrescueend.com/releases/rvm-install-head > install
-    $ sh install
-
-Follow post install instructions: edit ~/.bashrc according to webpage.
-
-C. Install Ruby 1.9.2 (Linux or OS X)
--------------------------------------
-
-    $ rvm install 1.9.2
-    $ rvm use 1.9.2
-    $ ruby -v
-    ruby 1.9.2p0 .......
-    $ rvm --default 1.9.2
-
-D. Install Rails 3 (All Platforms)
-----------------------------------
-
-This command needs to be run in the bash shell. See instructions above
-on how to get a working shell.
-
-    $ gem install rails
-
-E. Test Rails App
------------------
-
-Create rails project.
-
-    $ cd
-    $ mkdir rails_stuff
-    $ cd rails_stuff
-    $ rails new test_app
-
-Run bundle install
-
-    $ cd test_app
-    $ bundle install
-
-Build default (empty) database:
-
-    $ rake db:create
-
-The rake tool is a handy command for performing many important tasks
-with Rails. You can see a list of them like this:
-
-    $ rake -T
-
-Run the server
-
-    $ rails server
-
-Test it out, go to [localhost:3000](http://localhost:3000/)
-
-Kill the server with Control-C
-
-Introduction to Ruby
+Sequential execution
 --------------------
 
-Enter interactive Ruby shell.
+In a simple Python program, the statements execute in order from top to
+bottom. Let's create a simple program using a text editor called
+*simple.py*:
 
-    $ irb
-    ruby-1.9.2p0 >
+    # simple.py
+    print("Hello, World")
+    print("Hi, there!")
 
-Type some simple numbers
+The output of running this Python program is:
 
-    ruby-1.9.2-p0 > 1
-    => 1 
-    ruby-1.9.2-p0 > 10
-    => 10 
-    ruby-1.9.2-p0 > 10.00000
-    => 10.0
+    Hello, World
+    Hi, there
 
-Type some strings
+It's a very simple example, but illustrates the point. When the
+execution reaches the end of the file, the program exits. There are ways
+to control the flow of execution that we'll look at later so your
+programs don't just exit right away.
 
-    ruby-1.9.2-p0 > "string"
-    => "string" 
-    ruby-1.9.2-p0 > 'x'
-    => "x" 
-    ruby-1.9.2-p0 > "Hi, my name is Bob."
-    => "Hi, my name is Bob."
+Numeric literals
+----------------
 
-What's going on? The value printed after the arrow is the value of the
-expression. These expression don't do anything, they are just numbers or
-strings of letters.
+In addition to string literals, Python supports numeric literals. There
+are two main types of numeric literals in Python: integers and floating
+points. Integers represent regular, integral numbers just like you might
+have encountered in a math class.
 
-Numbers: 1, 20, 100.1, -1.2334, -199999
+    100
+    >>> -2
+    -2
+    >>> -999
+    -999
+    >>> 0
+    0
 
-Strings: "Double quoted", 'single quoted'
+There are also floating point numbers, which are generally used to
+represent real numbers or numbers with a fractional component.
 
-Assign some variables
+    >>> 3.2
+    3.2
+    >>> -1.9
+    -1.9
+    >>> 3.14159
+    3.14159
+    >>> 0.0
+    0.0
 
-    ruby-1.9.2-p0 > x = 10.0
-    => 10.0 
-    ruby-1.9.2-p0 > y = 20.0
-    => 20.0 
-    ruby-1.9.2-p0 > z = x / y
-    => 0.5 
+Mathematical expressions
+------------------------
 
-Variables hold values. The value of the expression on the right hand
-side is assigned to the variable on the left.
+Python allows you to enter mathematical operators between numbers and
+those expressions will be reduced when the program executes according to
+the normal rules.
 
-Converting between strings and numbers.
+    >>> 5 + -3
+    2
+    >>> 6 - 9
+    -3
+    >>> 7 * 8
+    56
+    >>> 1 / 3
+    0.3333333333333333
 
-    ruby-1.9.2-p0 > x = 10
-    => 10 
-    ruby-1.9.2-p0 > x.class
-    => Fixnum 
-    ruby-1.9.2-p0 > y = x.to_s
-    => "10" 
-    ruby-1.9.2-p0 > y
-    => "10" 
-    ruby-1.9.2-p0 > y.class
-    => String
-    ruby-1.9.2-p0 > y.class
-    => String
-    ruby-1.9.2-p0 > y.to_i
-    => 10 
-    ruby-1.9.2-p0 > y.to_f
-    => 10.0
+In Python 3, dividing integers by each other has a floating point result
+value. Most operators applied to integers result in an integer value and
+the same goes for floating point numbers. If one or more of the
+operators is a floating point number or if the operation is division, the
+result will be a floating point number.
 
-Create some functions.
+    >>> 3.0 + 1
+    4.0
+    >>> 3 + 1
+    4
+    >>> 3.0 + 1.0
+    4.0
+    >>> 3 + 1.0
+    4.0
+    >>> 4 / 2
+    2.0
 
-    ruby-1.9.2-p0 > def my_func(x)
-    ruby-1.9.2-p0 ?>  print x
-    ruby-1.9.2-p0 ?>  end
-    => nil 
-    ruby-1.9.2-p0 > my_func("hello")
-    hello => nil 
+In many programming languages, and even Python (before version 3),
+dividing integers resulted in a integer result. You can simulate this
+behavior with the special integer division operator (//).
 
-A function looks like this:
+    >>> 4 // 2
+    2
+    >>> 1 // 2
+    0
 
-    def function_name(param1, param2, param3)
-      expr1
-      expr2
-      expr3
-    end
+As you can see, integer division is not generally useful, since any
+fractional part of the result is truncated.
 
-You call a function this way:
-
-    function_name(x,y,z)
-
-A function might not parameters:
-
-    def func()
-      print "hello"
-    end
-
-It can be called in two ways:
-
-    func()
-
-_or_
-
-    func
-
-The parentheses when calling a function are optional:
-
-    ruby-1.9.2-p0 > def adder(x,y,z)
-    ruby-1.9.2-p0 ?>  print x + y + z
-    ruby-1.9.2-p0 ?>  end
-    => nil 
-    ruby-1.9.2-p0 > adder(1,2,3)
-    6 => nil 
-    ruby-1.9.2-p0 > adder 1, 2, 3
-    6 => nil
-
-There are different kinds of scope, the visibility of variables which
-depends on the first letter of the name of the variable:
-* Local variables start with a-z or the underscore
-* Global variable start with the dollar sign
-* Instance variables start with @
-* Class variables start with @@
-* Constant variables start with a capital letter A-Z, similar to globals
-
-So far we've used local variables, which are only available "locally".
-For example:
-
-    def some_function(y)
-      x = y
-      print x
-    end
-
-The variables x and y in that example are local variables, only visible
-for a couple lines inside the function.
-
-Global variables are available everywhere in your program.
-
-    $my_global = "Steve"
-
-    def some_function()
-      print $my_global
-    end
-
-Well talk about instance and class variables a bit later.
-
-Arrays
-------
-
-Arrays are a sequence of values in a particular order.
-
-    my_array = [1,2,3,4]
-
-The values can be any kind of value including other arrays.
-
-    ["hello", 3, 4, ["array", "inside", "array"], 100.0]
-
-The values in an array can be pulled out with the bracket syntax:
-
-    ruby-1.9.2-p0 > x = ["A", "B", "C"]
-    => ["A", "B", "C"] 
-    ruby-1.9.2-p0 > x[0]
-    => "A" 
-    ruby-1.9.2-p0 > x[1]
-    => "B" 
-    ruby-1.9.2-p0 > x[2]
-    => "C"
-
-The first element is the zeroth element. In programming, you almost
-always start counting with 0.
-
-Elements may be added or removed from the end of the array, also known
-as pushing and popping.
-
-    ruby-1.9.2-p0 > my_array = []
-    => [] 
-    ruby-1.9.2-p0 > my_array.push "hello"
-    => ["hello"] 
-    ruby-1.9.2-p0 > my_array.push "world"
-    => ["hello", "world"] 
-    ruby-1.9.2-p0 > my_array.pop
-    => "world" 
-    ruby-1.9.2-p0 > my_array
-    => ["hello"]
-
-Classes and Objects
+Order of Operations
 -------------------
 
-Ruby is a so-called Object-Oriented Language. All the values we've seen
-so far can be called objects. Objects have a type or "class".
+You may remember from Algebra class that certain mathematical operations
+have precedence over others and should be applied in a certain order.
+Python respects these rules. You can also override these rules using
+parentheses. You can verify this easily in the shell.
 
-    ruby-1.9.2-p0 > 10.class
-    => Fixnum 
-    ruby-1.9.2-p0 > "hello".class
-    => String 
-    ruby-1.9.2-p0 > [1, 3, 4].class
-    => Array
+    >>> 1 + 2 * 5
+    11
+    >>> (1 + 2) * 5
+    15
 
-You can create your own classes, or modify Ruby's built in classes.
-Let's add something silly to the String class.
+This makes the Python shell a very handy calculator, allowing you to
+enter arbitrary mathematical expressions. To raise one number to an
+exponential power, use the double-asterisk operator.
 
-    ruby-1.9.2-p0 > class String
-    ruby-1.9.2-p0 ?>  def say_hello()
-    ruby-1.9.2-p0 ?>    print "hello " + self
-    ruby-1.9.2-p0 ?>    end
-    ruby-1.9.2-p0 ?>  end
-    => nil 
-    ruby-1.9.2-p0 > "Steve".say_hello
-    hello Steve => nil
-
-We can create our own class.
-
-    class Name
-      def initialize(first, last)
-        @first = first
-        @last = last
-      end
-
-      def say_hello
-        print "Hello, " + @first
-      end
-    end
-
-You create instances of the class with the new method.
-
-    ruby-1.9.2-p0 > me = Name.new "Steve", "Goss"
-    => #<Name:0x00000001146b98 @first="Steve", @last="Goss">
-    ruby-1.9.2-p0 > me
-    => #<Name:0x00000001146b98 @first="Steve", @last="Goss">
-    ruby-1.9.2-p0 > me.say_hello
-    Hello, Steve => nil
-
-When you call the new method on the class (Name.new), an instance is
-created and the initialize method is called. In the previous example,
-two instance variables are created in the initialize method. These
-variables exist within the particular instance of the class that was
-created. In this case, the created instance we assigned to the variable
-"me".
-
-Find more on classes here: [Ruby Classes](http://ruby.runpaint.org/classes)
-
-More about Ruby 1.9 here: [Read Ruby](http://ruby.runpaint.org/)
-Another free online Ruby book: [Ruby Essentials](http://www.techotopia.com/index.php/Ruby_Essentials)
-[Why's Poignant Guide to Ruby](http://mislav.uniqpath.com/poignant-guide/)
-
-If you are new to Ruby, maybe start with Why's text, move to Ruby
-Essentials. Read Ruby is a good reference, but maybe not designed for
-Ruby beginners.
-
-Official Ruby Webpage: [ruby-lang.org](http://www.ruby-lang.org/en/)
+    >>> 10 ** 10
+    10000000000
+    >>> 0.5 ** 10
+    0.0009765625
+    >>> 10 ** 0.5
+    3.1622776601683795
+    >>> 100 ** 0.5
+    10.0
 

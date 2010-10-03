@@ -1,9 +1,9 @@
-Welcome to Ruby Class Notes!
+Welcome to Python Class Notes!
 ----------------------------
 
 **What is this?**
 
-It's a place I made to put notes for a Ruby on Rails class. This web
+It's a place I made to put notes for a Python class. This web
 page is itself a very simple Ruby on Rails application.
 
 **Who are you?**
@@ -19,5 +19,5 @@ under a BSD license.
 **How can I contribute?**
 
 You can fork the code and content on 
-[github](http://http://github.com/deliciousrobots/md_docs)
+[github](http://http://github.com/deliciousrobots/py_md_docs)
 make your changes and send me a pull request.
