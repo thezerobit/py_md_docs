@@ -193,3 +193,30 @@ exponential power, use the double-asterisk operator.
     >>> 100 ** 0.5
     10.0
 
+Variable Assignment
+-------------------
+
+Variables are places to store values, by associating them with a name.
+Variables contain letters, numbers and underscores (&#95;), but may not
+start with a numerical digit. Here are valid variable names:
+
+    my_var
+    x10
+    YOU
+    _here
+    wowza
+
+In order to assign a variable name a value, you use the assignment
+operator (=). In an assignment, the right side of the statement is
+evaluated first and then assigned to the variable name on the left.
+
+    x = 10 + 20
+
+In this example, first the right hand side (10 + 20) is evaluated and x
+is assigned the value 30. We can then do other things with the value
+stored in x, using x in place of the value.
+
+    print(x) # prints 30
+    y = x * 2 # now y has the value 60
+
+

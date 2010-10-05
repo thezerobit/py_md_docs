@@ -131,6 +131,3 @@ ignored and are exempt from indentation rules.
 
     my_name = "Steve"
 
-
-
-
