@@ -72,7 +72,6 @@ You can select certain characters from a string.
     >>> letter
     'c'
 
-
 You can compare strings.
 
     >>> "hi" == 'hi'
@@ -82,5 +81,26 @@ You can compare strings.
 
 As you can see, the single or double quote marks don't make different
 strings. However, capitalization does make a difference.
+
+Getting Input From User
+-----------------------
+
+In simple Python program, the easiest way to get input from the user is
+with the *input* function. This is how you might get the user to give
+you his or her name:
+
+    name = input("please enter your name: ")
+    print("Hello, %s!" % name)
+
+When you run this program, it will first show a prompt:
+
+    please enter your name: 
+
+It will wait for the user to type something and hit enter. Whatever it
+is that the user enters will then become a string assigned to the
+variable *name* and the program execution will continue on..
+
+    please enter your name: Steve
+    Hello, Steve!
 
 
