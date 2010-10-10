@@ -219,4 +219,4 @@ stored in x, using x in place of the value.
     print(x) # prints 30
     y = x * 2 # now y has the value 60
 
-
+Variables can hold any kind of value and can be changed.

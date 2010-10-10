@@ -34,8 +34,46 @@ result in a Boolean value. Some of these you might remember from math
 class.
 
 
+There are normal comparison operators, *&lt; &gt; &lt;= &gt;=*
 
+    >>> 10 > 20
+    False
+    >>> 20 > 10
+    True
+    >>> 1.2 < 3.4
+    True
+    >>> 3.0 < 3.0
+    False
+    >>> 3.0 <= 3.0
+    True
 
+Conditional Code
+----------------
 
+Python has a built in keyword, *if*, that executes a block of code
+conditionally:
 
+    if True:
+        print("let's do this")
+
+    if False:
+        print("this will never happen")
+
+The blocks of code are delimited with indentation, just like functions.
+
+    x = 10
+    if x < 20:
+        print("x is less than 20")
+        x = x * 3
+
+    if x >= 20:
+        print("now x is greater than or equal to 20")
+
+An *if* block can be followed by a mutually exclusive *else* block that
+will execute if the condition is false:
+
+    if x > 10:
+        print("This may print")
+    else:
+        print("or this, but never both")
 
