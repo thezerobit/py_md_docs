@@ -132,4 +132,56 @@ commands:
     >>> list_again == my_list
     True
 
+Dictionaries
+------------
+
+A Python dictionary is a mapping of unique keys to values. A key in a
+dictionary can be any immutable value, like a number, string or even a
+tuple. The values that the keys point to can be any Python value.
+Dictionaries are constructed with the curly braces *{}* with colons *:*
+to separate the key and the value, with commas between each pair:
+
+    >>> my_dict = {"a" : 10, "b" : 10}
+    >>> my_dict
+    {'a': 10, 'b': 10}
+    >>> len(my_dict)
+    2
+
+Dictionaries are mutable, which means they can be changed. Elements may
+be reference via square brackets, using the key:
+
+    >>> my_dict["a"]
+    10
+    >>> my_dict["b"]
+    10
+    >>> my_dict["c"] = 20
+    >>> my_dict["c"]
+    20
+    >>> my_dict
+    {'a': 10, 'c': 20, 'b': 10}
+
+Dictionaries are unordered, so the order that the keys are added doesn't
+necessarily reflect what order they may be reported back. While it is
+common to use strings as the keys, it is not a requirement:
+
+    >>> w = { 1 : "thing", "this" : "another thing", (1,2) : "a tuple!" }
+    >>> w
+    {'this': 'another thing', 1: 'thing', (1, 2): 'a tuple!'}
+    >>> w[(1,2)]
+    'a tuple!'
+
+Dictionaries are very similar to data structures found in other
+languages. In Ruby or Perl, it is a *hash*. In JavaScript it would be an
+*object*. In C++, it might be a *map*. The name *dictionary* emphasizes
+the fact that you can look up values, as you might in a real dictionary.
+
+    >>> definitions = { "ray" : "a drop of golden sun", "me" : "a name I call myself" }
+    >>> definitions["me"]
+    'a name I call myself'
+
+
+
+
+
+
 
