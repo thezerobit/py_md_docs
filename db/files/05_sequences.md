@@ -178,10 +178,3 @@ the fact that you can look up values, as you might in a real dictionary.
     >>> definitions = { "ray" : "a drop of golden sun", "me" : "a name I call myself" }
     >>> definitions["me"]
     'a name I call myself'
-
-
-
-
-
-
-
