@@ -77,3 +77,22 @@ will execute if the condition is false:
     else:
         print("or this, but never both")
 
+To create multiple mutually exclusive blocks of code, *elif* may be used
+with more conditional checks.
+
+    if x > 10:
+        print("x is greater than 10")
+    elif x > 5:
+        print("x is greater than 5, but not greater than 10")
+    elif x > 0:
+        print("x is greater than 0, but not greater than 5")
+    else:
+        print("x must be less than or equal to 0")
+
+In an *if* / *elif* / *else* section of code, the conditions are checked
+in order and when one is found to be *True* that block executes, and
+none of the others. If none of the conditions are true, the *else* blcok
+executes, if there is one.
+
+
+
