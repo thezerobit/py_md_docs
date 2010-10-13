@@ -65,3 +65,32 @@ True:* and just have the loop exit on *break*:
         print(x)
 
 
+The *for* loop
+--------------
+
+Python has a very easy syntax for looping through the elements of a
+sequence or any object that appears to be a sequence. The most obvious
+would be a list.
+
+    some_list = ["this", "that", "other"]
+
+    for word in some_list:
+        length = len(word)
+        print("The word '%s' has a length of %d." % (word, length))
+
+The block executes once for each element in the list and the variable
+specified right after the for statement (*word* in this case) holds a
+reference to the element for the loop. So the above code would print out
+the following:
+
+    The word 'this' has a length of 4.
+    The word 'that' has a length of 4.
+    The word 'other' has a length of 5.
+
+This also works with tuples
+
+    my_tuple = (1,2,3)
+
+    for num in my_tuple:
+        ten_times = num * 10
+        print("%d is ten times %d" % (ten_times, num))
