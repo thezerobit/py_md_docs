@@ -94,3 +94,77 @@ This also works with tuples
     for num in my_tuple:
         ten_times = num * 10
         print("%d is ten times %d" % (ten_times, num))
+
+The *range* object
+------------------
+
+For iterating a specific number of times, Python has a handy thing
+called a *range*. It's easiest perhaps to see it in action:
+
+    >>> for x in range(5):
+    ...     print(x)
+    ... 
+    0
+    1
+    2
+    3
+    4
+
+A *range* object is created by calling the *range* function.
+
+    >>> r = range(5)
+    >>> r
+    range(0, 5)
+    >>> for num in r:
+    ...     print(num * 10)
+    ... 
+    0
+    10
+    20
+    30
+    40
+
+A range has a starting value, a step and an end. By default the starting
+value is 0 and the step is 1. The range will allow you to iterate from
+the beginning to the end, but it exits before you reach the end, so a
+*range(5)* iterates from 0 through 4. You can be more specific and
+specify the start and the end:
+
+    >>> r2 = range(5,10)
+    >>> for x in r2: print(x)
+    ... 
+    5
+    6
+    7
+    8
+    9
+
+You can also specify the step as the third number:
+
+    >>> r3 = range(5,10, 2)
+    >>> for x in r3: print(x)
+    ...
+    5
+    7
+    9
+
+This allows iterating in reverse:
+
+    >>> r4 = range(10,0,-1)
+    >>> for x in r4: print(x)
+    ... 
+    10
+    9
+    8
+    7
+    6
+    5
+    4
+    3
+    2
+    1
+
+
+
+
+
