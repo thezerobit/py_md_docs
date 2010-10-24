@@ -147,10 +147,3 @@ scope which is this:
     print(my_age)
 
     say_my_age()
-
-
-
-
-
-
-
