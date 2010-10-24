@@ -38,9 +38,9 @@ it easier to read. Most programmers do this. Now, this is a simple
 program, although all it does is print out a single line. Run this by
 selecting the *Run Module* option from the *Run* menu at the top. At
 this point, if you haven't saved your changes, IDLE will ask you if it
-is OK to save. Click *OK*. At this point, your program will run in the
-first IDLE window with the title *Python Shell*. You may have to switch
-to this window. you should see something like this:
+is OK to save. Click *OK*. Your program will run in the first IDLE
+window with the title *Python Shell*. You may have to switch to this
+window. you should see something like this:
 
 
     Python 3.1.2 (release31-maint, Sep 17 2010, 20:27:33) 
@@ -160,7 +160,7 @@ automatically. You should see this at the bottom:
 If you see an error, you may have entered something incorrectly, so
 you'll need to go back and take a closer look at your program. Usually
 errors have a line number involved, that should help you find what line
-your error is one. Remember, Python is very sensitive to indentation, so
+your error is on. Remember, Python is very sensitive to indentation, so
 if there are extra spaces at the beginning of a line that shouldn't be
 indented, that could cause an error.
 
