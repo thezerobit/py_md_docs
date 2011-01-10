@@ -42,6 +42,14 @@ string of text, *"Hello, world"* which is passed to the string function.
 This is called a *function call* or you could say the print function is
 invoked.
 
+**Exercise 1:** Download and install the latest stable release of Python
+3.1 [here](http://python.org/download/releases/3.1.3/). Open IDLE, and
+enter the following at the "&gt;&gt;&gt;" prompt:
+
+    print("This is only a test", 1 / 2)
+
+Record the output of the command.
+
 String Literals
 ---------------
 
@@ -73,6 +81,24 @@ You'll notice the shell uses whichever is more convenient, using double
 quotes if a string contains only single quotes and vice versa when
 displaying the value of the string.
 
+You may see an error if you attempt to enter a string that does not
+include matching quote symbols
+
+    >>> "this string is unclosed
+    SyntaxError: EOL while scanning string literal
+    >>> "double quoted strings may not end with single quote'
+    SyntaxError: EOL while scanning string literal
+    >>> 'and vice versa"
+    SyntaxError: EOL while scanning string literal
+    >>> "This is correct"
+    'This is correct'
+    >>> 'so is this'
+    'so is this'
+
+**Exercise 2:** Enter the following text as a double quoted string and
+as a single quoted string: *She said, "Python's the best."*
+Record the output.
+
 Sequential execution
 --------------------
 
@@ -93,6 +119,10 @@ It's a very simple example, but illustrates the point. When the
 execution reaches the end of the file, the program exits. There are ways
 to control the flow of execution that we'll look at later so your
 programs don't just exit right away.
+
+**Exercise 3:** Create a file called *poem.py* that contains several
+print statements that print out the lines of a poem in the correct
+order.
 
 Numeric literals
 ----------------
@@ -121,6 +151,11 @@ represent real numbers or numbers with a fractional component.
     3.14159
     >>> 0.0
     0.0
+
+**Exercise 4:** When you enter numbers into the Python shell, it will
+only retain a certain number of digits after the decimal point. Try
+entering longer and longer numbers and record how many digits after the
+decimal are shown in the number that Python prints out.
 
 Mathematical expressions
 ------------------------
@@ -167,6 +202,10 @@ behavior with the special integer division operator (//).
 As you can see, integer division is not generally useful, since any
 fractional part of the result is truncated.
 
+**Exercise 5:** Use the Python shell to calculate approximately how much
+rent you pay per day in a 30 day month if your rent is $700 a month.
+Record what you typed into the Python shell and the output.
+
 Order of Operations
 -------------------
 
@@ -192,6 +231,10 @@ exponential power, use the double-asterisk operator.
     3.1622776601683795
     >>> 100 ** 0.5
     10.0
+
+**Exercise 6:** Use the Python shell to sum the number 5 and 6 and
+multiply that value by 7. Record your input to the Python shell and the
+output.
 
 Variable Assignment
 -------------------
@@ -220,3 +263,41 @@ stored in x, using x in place of the value.
     y = x * 2 # now y has the value 60
 
 Variables can hold any kind of value and can be changed.
+
+Remember that Python executes commands sequentially from top to bottom.
+Here is a short program that calculates interest:
+
+    # interest.py
+    interest_rate = 0.05
+    starting_amount = 1000.0
+    interest_made = starting_amount * interest_rate
+    total_amount = starting_amount + interest_made
+
+    print("You made this much interest: $", interest_made)
+    print("This is the total amount: $", total_amount)
+
+The first line of the program is a comment, signified by the hash symbol
+(#) at the beginning of the line and is ignored. I used to show the name
+of the file. The next line assigns the numerical value 0.05 to the
+variable *interest_rate*. The line after that assigns the numerical
+value 1000.0 to the variable *starting_amount*. The following line first
+multiplies the value stored in the *interest_rate* variable with the
+value stored in the *starting_amount* variable. The resulting value is
+then assigned to a new variable called *interest_made*. After that,
+*starting_amount* and *interest_made* are added together and the
+resulting value assigned to the variable *total_amount*.
+
+After the calculations, there is a blank line which is ignored by
+Python. Empty lines may be used to break up different parts of a
+program. In this case, there is a blank line between the lines of code
+that calculate the interest and the lines of code which print out the
+result.
+
+The two lines that start with "print" just print out some information
+for the user. This is what the output of running this program:
+
+    You made this much interest: $ 50.0
+    This is the total amount: $ 1050.0
+
+**Exercise 7:** Write a small Python program called *hours.py* that
+calculates the number of hours you spend sleeping every week.
