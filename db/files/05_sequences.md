@@ -199,7 +199,7 @@ might in a real dictionary.
     >>> definitions['me']
     'a name I call myself'
 
-**Exercise 3:** Do the same thing as exercise 2, but instead of a list,
+**Exercise 3:** Do the same thing as exercise 1, but instead of a list,
 create a dictionary called **userinfodict** with these three keys:
 'name', 'age', and 'flavor'.  The values associated with those keys are
 the values entered by the user.
