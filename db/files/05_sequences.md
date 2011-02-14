@@ -27,8 +27,8 @@ element indexes for either retrieval or assignment.
 
 Lists are mutable, which means they can be modified. They can be
 modified other than through assignment in the previous example. You can
-add (append) values to the end of the list or remove (pop) values from
-the end of the list.
+add (**append**) values to the end of the list or remove (**pop**)
+values from the end of the list.
 
     >>> my_list
     ['x', 'b', 'c']
